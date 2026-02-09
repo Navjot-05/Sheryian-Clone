@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import bcrypt from 'bcryptjs';
+import jwt from 'jsonwebtoken';
 
 const userSchema = mongoose.Schema(
     {
@@ -14,7 +15,19 @@ const userSchema = mongoose.Schema(
         },
         password: {
             type: String,
-            required: true,
+            required: function () {
+                return !this.googleId && !this.appleId;
+            },
+        },
+        googleId: {
+            type: String,
+            unique: true,
+            sparse: true,
+        },
+        appleId: {
+            type: String,
+            unique: true,
+            sparse: true,
         },
         isAdmin: {
             type: Boolean,
@@ -30,6 +43,13 @@ const userSchema = mongoose.Schema(
 // Method to check if password matches
 userSchema.methods.matchPassword = async function (enteredPassword) {
     return await bcrypt.compare(enteredPassword, this.password);
+};
+
+// Method to generate JWT
+userSchema.methods.generateToken = function () {
+    return jwt.sign({ id: this._id }, process.env.JWT_SECRET, {
+        expiresIn: '30d',
+    });
 };
 
 // Middleware to hash password before saving

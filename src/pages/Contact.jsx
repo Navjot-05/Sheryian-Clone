@@ -23,7 +23,7 @@ const Contact = () => {
                         <div className="space-y-8 mb-16">
                             {[
                                 { icon: Mail, label: 'Email', value: 'hello@sheryians.com' },
-                                { icon: Phone, label: 'Phone', value: '+91 800 123 4567' },
+                                { icon: Phone, label: 'Phone', value: '+91 8209404143' },
                                 { icon: MapPin, label: 'Location', value: 'Bhopal, Madhya Pradesh, India' },
                             ].map((item, i) => (
                                 <div key={i} className="flex gap-6 items-center">
