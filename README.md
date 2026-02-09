@@ -1,10 +1,34 @@
-# React + Vite
+# Sheryian Coding School 2.0 Clone (v1.0)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the initial production-ready version of the Sheryian Coding School 2.0 clone, built with React, Vite, and Tailwind CSS v4.
 
-Currently, two official plugins are available:
+## 🚀 Version 1.0 Features
+- **Premium UI/UX**: Dark-themed aesthetic with teal (#24CFA6) accents.
+- **Glassmorphism**: Modern card designs with backdrop blur and subtle borders.
+- **Animations**: Integrated Framer Motion for smooth section transitions and interactive hover states.
+- **Responsive Layout**: Fully optimized for Desktop, Tablet, and Mobile.
+- **Core Pages**:
+  - **Home**: Full hero, features, stats, and testimonials.
+  - **Product**: Technical overview and philosophy.
+  - **Pricing**: Dynamic plan cards with FAQ.
+  - **Resources**: Knowledge base and blog preview.
+  - **About**: Company story and timeline.
+  - **Contact**: Functional-style inquiry form.
+- **SEO Ready**: includes sitemap.xml, robots.txt, and optimized meta tags.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+## 🛠️ Tech Stack
+- **React 19**
+- **Vite**
+- **Tailwind CSS v4**
+- **Framer Motion**
+- **Lucide React**
+- **React Router Dom**
+
+## 🏁 Getting Started
+```bash
+npm install
+npm run dev
+```
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 ## React Compiler
